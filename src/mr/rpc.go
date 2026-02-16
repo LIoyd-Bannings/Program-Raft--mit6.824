@@ -23,6 +23,25 @@ type ExampleReply struct {
 }
 
 // Add your RPC definitions here.
+type GetTaskArgs struct{}//master收到的信号，收到它意味着worker要任务了，要发送下面的GetTaskReply 给他们安排任务
+
+//matser给的回复信号
+type GetTaskReply struct{
+	TaskType string //任务类型
+	NReduce int //任务数量
+	TaskID int //任务的编号
+	FileName string//文件名
+	NMap int//干Map的任务总数
+}
+
+//worker把任务结束后，给master发送报告
+type TellTaskComplete struct{
+	TaskType string//完成的什么任务
+	TaskID   int//完成的任务ID
+}
+
+//matser发送的回复
+type KonwTaskComplete struct{}
 
 
 // Cook up a unique-ish UNIX-domain socket name
