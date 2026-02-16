@@ -1,8 +1,8 @@
 # MIT 6.824 Raft 分布式一致性协议实现 (Go)
 
-本项目是 MIT 6.824 (Distributed Systems) 课程中 Raft 共识算法的完整实现。目前已完成 **Lab 2A (Election)**、**Lab 2B (Log Replication)** 和 **Lab 2C (Persistence)**。
+本项目是 MIT 6.824 (Distributed Systems) 课程中 Raft 共识算法的完整实现。目前已完成 **Lab 1**、 **Lab 2A (Election)**、**Lab 2B (Log Replication)** 和 **Lab 2C (Persistence)**。
 
-## 🛠 已实现核心功能
+## 🛠 Raft算法已实现核心功能
 
 ### 1. 领导者选举 (Leader Election - Lab 2A)
 - **状态机实现**：实现了 Follower、Candidate、Leader 三种状态的切换逻辑。
